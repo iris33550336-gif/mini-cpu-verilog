@@ -34,13 +34,13 @@ Register
 ![ALU 波形](docs/waveform.png)
 
 ### 寄存器波形
-![寄存器波形](docs/register_waveform.png)
+![寄存器波形](register_waveform.png)
 
 ### 控制单元波形
-![控制单元波形](docs/control_unit_waveform.png)
+![控制单元波形](control_unit_waveform.png)
 
 ### CPU 数据通路波形
-![CPU 波形](docs/cpu_waveform.png)
+![CPU 波形](cpu_waveform.png)
 
 ---
 
@@ -60,17 +60,21 @@ iverilog -o alu_tb.vvp src/alu.v alu_tb.v
 vvp alu_tb.vvp
 
 ### 2. 编译并运行寄存器测试
+```bash
 iverilog -o register_tb.vvp src/register.v register_tb.v
 vvp register_tb.vvp
 
 ### 3. 编译并运行控制单元测试
+```bash
 iverilog -o control_unit_tb.vvp src/control_unit.v control_unit_tb.v
 vvp control_unit_tb.vvp
 
 ### 4. 编译并运行完成CPU通路测试
+```bash
 iverilog -o cpu_tb.vvp src/cpu.v src/control_unit.v src/alu.v cpu_tb.v
 vvp cpu_tb.vvp
 
 ### 5. 查看波形图
+```bash
 gtkwave x_waveform .vcd
 
