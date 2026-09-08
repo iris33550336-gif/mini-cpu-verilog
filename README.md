@@ -59,22 +59,27 @@ Register
 iverilog -o alu_tb.vvp src/alu.v alu_tb.v
 vvp alu_tb.vvp
 
+
 ### 2. 编译并运行寄存器测试
-```bash
+bash
 iverilog -o register_tb.vvp src/register.v register_tb.v
 vvp register_tb.vvp
 
+
 ### 3. 编译并运行控制单元测试
-```bash
+bash
 iverilog -o control_unit_tb.vvp src/control_unit.v control_unit_tb.v
 vvp control_unit_tb.vvp
 
+
 ### 4. 编译并运行完成CPU通路测试
-```bash
+bash
 iverilog -o cpu_tb.vvp src/cpu.v src/control_unit.v src/alu.v cpu_tb.v
 vvp cpu_tb.vvp
 
+
 ### 5. 查看波形图
-```bash
+bash
 gtkwave x_waveform .vcd
+
 
