@@ -22,8 +22,8 @@
 
 ## 系统结构
 opcode → Control Unit → ALU → result
-↑
-Register
+                            ↑
+                          Register
 
 
 ---
