@@ -31,7 +31,7 @@ opcode → Control Unit → ALU → result
 ## 仿真结果
 
 ### ALU 波形
-![ALU 波形](docs/waveform.png)
+![ALU 波形](waveform.png)
 
 ### 寄存器波形
 ![寄存器波形](register_waveform.png)
